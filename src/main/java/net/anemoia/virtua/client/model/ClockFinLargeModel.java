@@ -1,5 +1,6 @@
 package net.anemoia.virtua.client.model;
 
+import net.anemoia.virtua.client.animations.ClockFinLargeAnimations;
 import net.anemoia.virtua.common.entity.ClockFin;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -37,11 +38,16 @@ public class ClockFinLargeModel<T extends ClockFin> extends HierarchicalModel<T>
 
 	@Override
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        float f = 1.0f;
-        if (!entity.isInWater()) {
-            f = 1.5f;
-        }
+        this.root().getAllParts().forEach(ModelPart::resetPose);
 
-        this.fin.yRot = -f * 0.45F * Mth.sin(0.6F * ageInTicks);
+        // Check if entity is moving
+        double movementSpeed = entity.getDeltaMovement().lengthSqr();
+        boolean isMoving = movementSpeed > 0.001; // Much lower threshold
+
+        if (isMoving) {
+            this.animate(entity.getSwimAnimationState(), ClockFinLargeAnimations.swim, ageInTicks, 1.0F);
+        } else {
+            this.animate(entity.getIdleAnimationState(), ClockFinLargeAnimations.idle, ageInTicks, 1.0F);
+        }
 	}
 }
