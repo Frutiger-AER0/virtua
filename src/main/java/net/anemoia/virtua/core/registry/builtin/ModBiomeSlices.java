@@ -7,6 +7,7 @@ import com.teamabnormals.blueprint.core.registry.BlueprintDataPackRegistries;
 import com.teamabnormals.blueprint.core.util.BiomeUtil;
 import com.teamabnormals.blueprint.core.util.BiomeUtil.MultiNoiseModdedBiomeProvider;
 import net.anemoia.virtua.core.Virtua;
+import net.anemoia.virtua.core.registry.ModBiomes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
@@ -26,7 +27,7 @@ import java.util.function.Consumer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static net.anemoia.virtua.core.registry.builtin.ModBiomes.*;
+import static net.anemoia.virtua.core.registry.ModBiomes.*;
 
 public class ModBiomeSlices {
     public static final ResourceKey<ModdedBiomeSlice> SANDS_OF_TIME_SLICE = createKey("sands_of_time_slice");

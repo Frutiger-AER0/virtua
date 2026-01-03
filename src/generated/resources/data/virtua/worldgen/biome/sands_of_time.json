@@ -2,8 +2,8 @@
   "carvers": {},
   "downfall": 0.0,
   "effects": {
-    "fog_color": 3519728,
-    "sky_color": 2421480,
+    "fog_color": 2421480,
+    "sky_color": 3519728,
     "water_color": 2421480,
     "water_fog_color": 3519728
   },
@@ -34,6 +34,12 @@
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
+    ],
+    [],
+    [],
+    [],
+    [
+      "virtua:stone_patch"
     ]
   ],
   "has_precipitation": false,

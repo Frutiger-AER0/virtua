@@ -47,6 +47,8 @@ public class Virtua {
         MinecraftForge.EVENT_BUS.register(this);
 
         REGISTRY_HELPER.register(bus);
+        ModFeatures.FEATURES.register(bus);
+        ModPlacementModifierTypes.PLACEMENT_MODIFIER_TYPES.register(bus);
         ModCreativeModeTabs.CREATIVE_MODE_TABS.register(bus);
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);

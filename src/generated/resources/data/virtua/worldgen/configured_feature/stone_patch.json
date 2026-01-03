@@ -1,0 +1,24 @@
+{
+  "type": "virtua:stone_patch",
+  "config": {
+    "half_height": 1,
+    "radius": {
+      "type": "minecraft:uniform",
+      "value": {
+        "max_inclusive": 1,
+        "min_inclusive": 0
+      }
+    },
+    "state": {
+      "Name": "minecraft:stone"
+    },
+    "targets": [
+      {
+        "Name": "virtua:sand_of_time"
+      },
+      {
+        "Name": "minecraft:sandstone"
+      }
+    ]
+  }
+}

@@ -4,7 +4,7 @@ import com.teamabnormals.blueprint.common.world.modification.chunk.ChunkGenerato
 import com.teamabnormals.blueprint.common.world.modification.chunk.modifiers.SurfaceRuleModifier;
 import net.anemoia.virtua.core.Virtua;
 import net.anemoia.virtua.core.registry.ModBlocks;
-import net.anemoia.virtua.core.registry.builtin.ModBiomes;
+import net.anemoia.virtua.core.registry.ModBiomes;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Blocks;

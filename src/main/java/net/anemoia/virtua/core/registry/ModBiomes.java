@@ -1,4 +1,4 @@
-package net.anemoia.virtua.core.registry.builtin;
+package net.anemoia.virtua.core.registry;
 
 import net.anemoia.virtua.core.Virtua;
 import net.minecraft.core.HolderGetter;
@@ -8,6 +8,7 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -37,6 +38,7 @@ public final class ModBiomes {
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
         BiomeDefaultFeatures.addDefaultOres(generation);
         BiomeDefaultFeatures.addDefaultSoftDisks(generation);
+        generation.addFeature(GenerationStep.Decoration.TOP_LAYER_MODIFICATION, features.getOrThrow(ModFeatures.ModPlacedFeatures.STONE_PATCH));
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
@@ -44,8 +46,8 @@ public final class ModBiomes {
                 .downfall(0.0F)
                 .specialEffects(
                         new BiomeSpecialEffects.Builder()
-                                .skyColor(2421480)
-                                .fogColor(3519728)
+                                .skyColor(3519728)
+                                .fogColor(2421480)
                                 .waterColor(2421480)
                                 .waterFogColor(3519728)
                                 .build()
