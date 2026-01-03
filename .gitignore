@@ -26,3 +26,6 @@ run
 forge*changelog.txt
 /.github/copilot-instructions.md
 /.github/distribution.jpg
+/src/generated/resources/.cache/
+/run-data/config/fml.toml
+/run-data/
