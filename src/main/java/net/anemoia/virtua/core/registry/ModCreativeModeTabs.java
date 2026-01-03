@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.sands_of_time_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.SAND_OF_TIME.get());
+                        pOutput.accept(ModBlocks.REBAR_SPROUTS.get());
                         pOutput.accept(ModItems.TIME_BOTTLE.get());
                         pOutput.accept(ModItems.DISTILLED_TIME.get());
                     })

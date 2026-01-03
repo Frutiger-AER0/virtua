@@ -8,6 +8,8 @@ import net.anemoia.virtua.core.data.server.modifiers.ModChunkGeneratorModifierPr
 import net.anemoia.virtua.core.other.ModModelLayers;
 import net.anemoia.virtua.core.registry.*;
 import net.anemoia.virtua.core.registry.helper.ModBlockSubRegistryHelper;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -122,7 +124,7 @@ public class Virtua {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.REBAR_SPROUTS.get(), RenderType.cutoutMipped());
         }
     }
 }

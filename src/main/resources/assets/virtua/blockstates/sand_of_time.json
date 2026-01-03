@@ -1,7 +1,11 @@
 {
   "variants": {
-    "": {
-        "model": "virtua:block/sand_of_time"
-    }
+    "": [
+      { "model": "virtua:block/sand_of_time_swirl", "weight": 1 },
+      { "model": "virtua:block/sand_of_time_hourglass", "weight": 1 },
+      { "model": "virtua:block/sand_of_time_watch", "weight": 1 },
+      { "model": "virtua:block/sand_of_time_straight", "weight": 2 },
+      { "model": "virtua:block/sand_of_time", "weight": 245 }
+    ]
   }
 }

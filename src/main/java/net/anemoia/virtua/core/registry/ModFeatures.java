@@ -47,7 +47,7 @@ public class ModFeatures {
         public static final ResourceKey<PlacedFeature> STONE_PATCH = createKey("stone_patch");
 
         public static void bootstrap(BootstapContext<PlacedFeature> context) {
-            register(context, STONE_PATCH, ModConfiguredFeatures.STONE_PATCH, List.of(RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+            register(context, STONE_PATCH, ModConfiguredFeatures.STONE_PATCH, List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         }
 
         public static ResourceKey<PlacedFeature> createKey(String name) {
